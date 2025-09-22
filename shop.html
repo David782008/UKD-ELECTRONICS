@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - UKD Electronics</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">UKD Electronics</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html" class="active">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">Cart 🛒</a>
+    </nav>
+  </header>
+
+  <!-- Shop Products -->
+  <section class="products">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="product-image-container">
+          <img src="https://m.media-amazon.com/images/I/71p-M3sPhhL._AC_SL1500_.jpg" alt="Laptop Pro">
+          <span class="status-dot online" title="Available"></span>
+        </div>
+        <h3>Laptop Pro</h3>
+        <p class="price">$850</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="product-image-container">
+          <img src="https://m.media-amazon.com/images/I/61-r9zOKBCL._AC_SL1500_.jpg" alt="Smartphone X">
+          <span class="status-dot online" title="Available"></span>
+        </div>
+        <h3>Smartphone X</h3>
+        <p class="price">$600</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <div class="product-image-container">
+          <img src="images/42bae04a-4f21-46e2-b988-67f0ad3e39fc.webp" alt="Wireless Earbuds">
+          <span class="status-dot online" title="Available"></span>
+        </div>
+        <h3>Wireless Earbuds</h3>
+        <p class="price">$70</p>
+        <button>Add to Cart</button>
+      </div>
+<!-- Product 4 -->
+<div class="product-card">
+  <div class="product-image-container">
+    <img src="images/shopping copy.webp" alt="Fast Charger" title="Fast Charger">
+    <span class="status-dot online" title="Available"></span>
+  </div>
+  <h3>Fast Charger</h3>
+  <p class="price">$25</p>
+  <button>Add to Cart</button>
+</div>
+
+      <!-- Product 5 -->
+      <div class="product-card">
+        <div class="product-image-container">
+          <img src="laptop/images.jpg" alt="Voltage Stabilizer">
+          <span class="status-dot online" title="Available"></span>
+        </div>
+        <h3>Voltage Stabilizer</h3>
+        <p class="price">$120</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product-card">
+        <div class="product-image-container">
+          <img src="images/images copy 2.jpg" alt="Smart Watch">
+          <span class="status-dot online" title="Available"></span>
+        </div>
+        <h3>Smart Watch</h3>
+        <p class="price">$150</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="product-card">
+        <div class="product-image-container">
+          <img src="laptop/images copy.jpg" alt="Bluetooth Speaker">
+          <span class="status-dot online" title="Available"></span>
+        </div>
+        <h3>Bluetooth Speaker</h3>
+        <p class="price">$40</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="product-card">
+        <div class="product-image-container">
+          <img src="images/too-much-conflicting-information-what-brands-are-good-for-v0-zes72n36mvfd1.webp" alt="Gaming Laptop">
+          <span class="status-dot online" title="Available"></span>
+        </div>
+        <h3>Gaming Laptop</h3>
+        <p class="price">$1200</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <!-- Product 9 -->
+      <div class="product-card">
+        <div class="product-image-container">
+          <img src="laptop/images copy 2.jpg" alt="Tablet">
+          <span class="status-dot online" title="Available"></span>
+        </div>
+        <h3>Tablet</h3>
+        <p class="price">$300</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <!-- Product 10 -->
+      <div class="product-card">
+        <div class="product-image-container">
+          <img src="images/images.jpg" alt="Power Bank">
+          <span class="status-dot online" title="Available"></span>
+        </div>
+        <h3>Power Bank</h3>
+        <p class="price">$35</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <!-- Product 11 -->
+      <div class="product-card">
+        <div class="product-image-container">
+          <img src="images/images copy.jpg" alt="Headphones">
+          <span class="status-dot online" title="Available"></span>
+        </div>
+        <h3>Headphones</h3>
+        <p class="price">$60</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <!-- Product 12 -->
+      <div class="product-card">
+        <div class="product-image-container">
+          <img src="images/Untitled.jpg" alt="Camera">
+          <span class="status-dot online" title="Available"></span>
+        </div>
+        <h3>Camera</h3>
+        <p class="price">$500</p>
+        <button>Add to Cart</button>
+      </div>
+
+    </div>
+  </section>
+<a href="cart.html" id="cart-link">Cart 🛒 (<span id="cart-count">0</span>)</a>
+<!-- Cart Script -->
+<script>
+  // Load cart from localStorage or initialize empty
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  // Update cart count in navbar
+  function updateCartCount() {
+    const count = document.getElementById("cart-count");
+    if (count) count.innerText = cart.length;
+  }
+
+  // Add to Cart button functionality
+  document.querySelectorAll(".product-card button").forEach((button) => {
+    button.addEventListener("click", () => {
+      const productCard = button.closest(".product-card");
+      const name = productCard.querySelector("h3").innerText;
+      const price = productCard.querySelector(".price").innerText;
+      const img = productCard.querySelector("img").src;
+
+      const product = { name, price, img };
+      cart.push(product);
+
+      localStorage.setItem("cart", JSON.stringify(cart));
+
+      updateCartCount();
+      alert(`${name} added to cart!`);
+    });
+  });
+
+  // Initialize cart count on page load
+  updateCartCount();
+</script>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 UKD Electronics. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+

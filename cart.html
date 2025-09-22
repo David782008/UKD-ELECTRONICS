@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart - UKD Electronics</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header & Nav */
+    header {
+      background: #0a0a23;
+      color: #fff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ff6600;
+    }
+
+    /* Cart */
+    .cart-container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table th, table td {
+      padding: 15px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    table th {
+      background: #0a0a23;
+      color: #fff;
+    }
+
+    table img {
+      width: 80px;
+      border-radius: 8px;
+    }
+
+    .quantity input {
+      width: 50px;
+      padding: 5px;
+      text-align: center;
+    }
+
+    .summary {
+      margin-top: 20px;
+      text-align: right;
+    }
+
+    .summary p {
+      font-size: 1rem;
+      margin: 5px 0;
+    }
+
+    .summary strong {
+      font-size: 1.2rem;
+    }
+
+    .checkout-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 25px;
+      background: #ff6600;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .checkout-btn:hover {
+      background: #e65c00;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Header with Navigation -->
+  <header>
+    <div class="logo">UKD Electronics</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ✅ Cart Section -->
+  <div class="cart-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img src="images/laptop.jpeg" alt="Laptop"></td>
+          <td>HP Pavilion Laptop</td>
+          <td>$650</td>
+          <td class="quantity"><input type="number" value="1" min="1"></td>
+          <td>$650</td>
+        </tr>
+        <tr>
+          <td><img src="images/images copy.jpg" alt="Headphones"></td>
+          <td>Sony Headphones</td>
+          <td>$120</td>
+          <td class="quantity"><input type="number" value="2" min="1"></td>
+          <td>$240</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="summary">
+      <p>Subtotal: <strong>$890</strong></p>
+      <p>Shipping: <strong>$20</strong></p>
+      <p>Total: <strong>$910</strong></p>
+      <a href="checkout.html" class="checkout-btn">Proceed to Checkout</a>
+    </div>
+  </div>
+
+</body>
+</html>
